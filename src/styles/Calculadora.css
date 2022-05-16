@@ -1,0 +1,22 @@
+.cuadro_calc {
+    max-width: fit-content;
+    max-height: fit-content;
+    background-color: #bbc2c7;
+    padding: 60px;
+    position: relative;
+    right: 160px;
+    bottom: 15px;
+}
+
+.grid_numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.botonc {
+    border-radius: 10px;
+    border: transparent;
+    padding: 10px;
+}

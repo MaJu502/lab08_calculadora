@@ -41,5 +41,6 @@ module.exports = {
     'no-unused-vars': ['off'],
     'react/jsx-max-props-per-line': ['off'],
     'react/jsx-first-prop-new-line': ['off'],
+    'import/extensions': ['off'],
   },
 }
