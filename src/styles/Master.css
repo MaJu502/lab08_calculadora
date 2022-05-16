@@ -2,8 +2,32 @@
     background-image: url(https://i.pinimg.com/564x/bd/f5/f8/bdf5f847f1dd56d073a6892d9a490a43.jpg);
     max-width: fit-content;
     max-height: 100%;
-    padding: 200px;
+    padding-top: 140px;
+    padding-left: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 450px;
+    top: 80px;
+}
+
+.titulo {
+    background-color:#268d88 ;
+    border-radius: 30px;
+    border: transparent;
+    height: 75px;
+    width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    left: 475px;
+}
+
+.texto_titulo {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }

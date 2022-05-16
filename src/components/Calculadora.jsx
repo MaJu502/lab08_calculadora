@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react'
 import '../styles/Calculadora.css'
@@ -5,6 +6,9 @@ import { evaluate } from 'mathjs'
 
 const Calculadora = () => (
   <div className="cuadro_calc">
+    <div className="pantalla">
+      <a className="contenido_pantalla">hola</a>
+    </div>
     <div className="grid_numeros">
       <button type="button" className="botonc">7</button>
       <button type="button" className="botonc">8</button>

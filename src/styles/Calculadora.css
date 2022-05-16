@@ -4,8 +4,9 @@
     background-color: #bbc2c7;
     padding: 60px;
     position: relative;
-    right: 160px;
-    bottom: 15px;
+    right: 218px;
+    bottom: 45px;
+    transform: rotate(-2deg);
 }
 
 .grid_numeros {
@@ -19,4 +20,15 @@
     border-radius: 10px;
     border: transparent;
     padding: 10px;
+}
+
+.pantalla {
+    background-color: lightgreen;
+    position: relative;
+    padding: 20px;
+    bottom: 25px;
+}
+
+.contenido_pantalla {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

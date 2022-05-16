@@ -5,9 +5,15 @@ import Calculadora from './components/Calculadora.jsx'
 import './styles/Master.css'
 
 const App = () => (
-  <div className="screen_calc">
-    <Calculadora />
+  <div>
+    <header className="titulo">
+      <h1 className="texto_titulo"> Bienvenido a Calculadora! </h1>
+    </header>
+    <div className="screen_calc">
+      <Calculadora />
+    </div>
   </div>
+  
 )
 
 ReactDOM.render(<App />, document.getElementById('root'))
