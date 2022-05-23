@@ -13,7 +13,6 @@ const App = () => (
       <Calculadora />
     </div>
   </div>
-  
 )
 
 ReactDOM.render(<App />, document.getElementById('root'))

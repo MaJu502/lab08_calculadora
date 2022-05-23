@@ -1,2 +1,4 @@
 **/src/index.html
 **/src/master.css
+**/jest.config.js
+**/mocks/styleMock.js

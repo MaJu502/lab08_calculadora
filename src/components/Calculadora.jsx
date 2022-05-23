@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-alert */
 /* eslint-disable radix */
 /* eslint-disable jsx-a11y/control-has-associated-label */
@@ -11,22 +12,22 @@ const Calculadora = () => {
   const [dato1, letDato1] = React.useState('')
   const [dato2, letDato2] = React.useState('')
   const [operador, letOperador] = React.useState('0')
-  const [resultado, letResultado] = React.useState('0')
   const [pantalla, letPantalla] = React.useState('_')
 
   const mostrarResultado = () => {
     const tempOperador = operador
     if (tempOperador === '+') {
-      let tempFinal = parseFloat(dato1) + parseFloat(dato2)
+      const tempFinal = parseFloat(dato1) + parseFloat(dato2)
+      let resPantalla = tempFinal
       if (tempFinal >= 999999999) {
         letPantalla('ERROR')
       } else if (tempFinal < 0) {
         letPantalla('ERROR')
       } else {
-        tempFinal = tempFinal.toString().substring(0, 9)
+        resPantalla = tempFinal.toString().substring(0, 9)
         letPantalla(tempFinal)
       }
-      letDato1('')
+      letDato1(tempFinal)
       letDato2('')
       letOperador('0')
     } else if (tempOperador === '-') {
@@ -154,27 +155,20 @@ const Calculadora = () => {
         letDato1(temp)
       } else if (dato === '+') {
         letOperador('+')
-        letPantalla('+')
       } else if (dato === '-') {
         letOperador('-')
-        letPantalla('-')
       } else if (dato === 'x') {
         letOperador('x')
-        letPantalla('x')
       } else if (dato === '/') {
         letOperador('/')
-        letPantalla('/')
       } else if (dato === '%') {
         letOperador('%')
-        letPantalla('%')
       } else if (dato === '=') {
         mostrarResultado()
-        letDato1('')
         letDato2('')
       } else if (dato === 'C') {
         letDato1('')
         letDato2('')
-        letResultado('0')
         letOperador('0')
         letPantalla('_')
         alert('reseteado')
@@ -248,28 +242,21 @@ const Calculadora = () => {
         letDato2(temp)
       } else if (dato === '+') {
         letOperador('+')
-        letPantalla('+')
       } else if (dato === '-') {
         letOperador('-')
-        letPantalla('-')
       } else if (dato === 'x') {
         letOperador('x')
-        letPantalla('x')
       } else if (dato === '/') {
         letOperador('/')
-        letPantalla('/')
       } else if (dato === '%') {
         letOperador('%')
-        letPantalla('%')
       } else if (dato === '=') {
         mostrarResultado()
-        letDato1('')
         letDato2('')
       } else if (dato === 'C') {
         letDato1('')
         letDato2('')
         letOperador('0')
-        letResultado('0')
         letPantalla('_')
         alert('reseteado')
       }
@@ -301,7 +288,7 @@ const Calculadora = () => {
         <button type="button" className="botonc">:3</button>
         <button type="button" onClick={() => { ingresoDatos('.') }} className="botonc">.</button>
         <button type="button" onClick={() => { ingresoDatos('%') }} className="botonc">%</button>
-        <button type="button" onClick={() => { ingresoDatos('/') }} className="botonc">/</button>
+        <button type="button" onClick={() => { ingresoDatos('/') }} className="botonc">DIV</button>
       </div>
     </div>
   )
