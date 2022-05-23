@@ -1,7 +1,7 @@
+/* eslint-disable no-alert */
 /* eslint-disable radix */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-multiple-empty-lines */
-/* eslint-disable no-console */
 /* eslint-disable no-const-assign */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react'
@@ -14,35 +14,70 @@ const Calculadora = () => {
   const [resultado, letResultado] = React.useState('0')
   const [pantalla, letPantalla] = React.useState('_')
 
-  const flashResultado = () => {
-    const tempResultado = resultado
-    console.log('resultado de flash -> ' + tempResultado)
-  }
-
   const mostrarResultado = () => {
     const tempOperador = operador
     if (tempOperador === '+') {
-      letPantalla(parseFloat(dato1) + parseFloat(dato2))
+      let tempFinal = parseFloat(dato1) + parseFloat(dato2)
+      if (tempFinal >= 999999999) {
+        letPantalla('ERROR')
+      } else if (tempFinal < 0) {
+        letPantalla('ERROR')
+      } else {
+        tempFinal = tempFinal.toString().substring(0, 9)
+        letPantalla(tempFinal)
+      }
       letDato1('')
       letDato2('')
       letOperador('0')
     } else if (tempOperador === '-') {
-      letPantalla(parseFloat(dato1) - parseFloat(dato2))
+      let tempFinal = parseFloat(dato1) - parseFloat(dato2)
+      if (tempFinal >= 999999999) {
+        letPantalla('ERROR')
+      } else if (tempFinal < 0) {
+        letPantalla('ERROR')
+      } else {
+        tempFinal = tempFinal.toString().substring(0, 9)
+        letPantalla(tempFinal)
+      }
       letDato1('')
       letDato2('')
       letOperador('0')
     } else if (tempOperador === 'x') {
-      letPantalla(parseFloat(dato1) * parseFloat(dato2))
+      let tempFinal = parseFloat(dato1) * parseFloat(dato2)
+      if (tempFinal >= 999999999) {
+        letPantalla('ERROR')
+      } else if (tempFinal < 0) {
+        letPantalla('ERROR')
+      } else {
+        tempFinal = tempFinal.toString().substring(0, 9)
+        letPantalla(tempFinal)
+      }
       letDato1('')
       letDato2('')
       letOperador('0')
     } else if (tempOperador === '/') {
-      letPantalla(parseFloat(dato1) / parseFloat(dato2))
+      let tempFinal = parseFloat(dato1) / parseFloat(dato2)
+      if (tempFinal >= 999999999) {
+        letPantalla('ERROR')
+      } else if (tempFinal < 0) {
+        letPantalla('ERROR')
+      } else {
+        tempFinal = tempFinal.toString().substring(0, 9)
+        letPantalla(tempFinal)
+      }
       letDato1('')
       letDato2('')
       letOperador('0')
     } else if (tempOperador === '%') {
-      letPantalla(parseFloat(dato1) % parseFloat(dato2))
+      let tempFinal = parseFloat(dato1) % parseFloat(dato2)
+      if (tempFinal >= 999999999) {
+        letPantalla('ERROR')
+      } else if (tempFinal < 0) {
+        letPantalla('ERROR')
+      } else {
+        tempFinal = tempFinal.toString().substring(0, 9)
+        letPantalla(tempFinal)
+      }
       letDato1('')
       letDato2('')
       letOperador('0')
@@ -50,65 +85,73 @@ const Calculadora = () => {
   }
 
   const ingresoDatos = (dato) => {
-    console.log('dato 1 ->' + dato1)
-    console.log('dato 2 ->' + dato2)
-    console.log('operador -> ' + operador)
     if (operador === '0') {
       if (dato === 1) {
         let temp = dato1
         temp += '1'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 2) {
         let temp = dato1
         temp += '2'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 3) {
         let temp = dato1
         temp += '3'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 4) {
         let temp = dato1
         temp += '4'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 5) {
         let temp = dato1
         temp += '5'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 6) {
         let temp = dato1
         temp += '6'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 7) {
         let temp = dato1
         temp += '7'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 8) {
         let temp = dato1
         temp += '8'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 9) {
         let temp = dato1
         temp += '9'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === 0) {
         let temp = dato1
         temp += '0'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === '.') {
         let temp = dato1
         temp += '.'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato1(temp)
-        letPantalla(temp)
       } else if (dato === '+') {
         letOperador('+')
         letPantalla('+')
@@ -126,74 +169,83 @@ const Calculadora = () => {
         letPantalla('%')
       } else if (dato === '=') {
         mostrarResultado()
-        flashResultado()
         letDato1('')
         letDato2('')
-        console.log(resultado)
       } else if (dato === 'C') {
         letDato1('')
         letDato2('')
         letResultado('0')
         letOperador('0')
         letPantalla('_')
-        console.log('reseteado')
+        alert('reseteado')
       }
     } else if (operador !== '0') {
       if (dato === 1) {
         let temp = dato2
         temp += '1'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 2) {
         let temp = dato2
         temp += '2'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 3) {
         let temp = dato2
         temp += '3'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 4) {
         let temp = dato2
         temp += '4'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 5) {
         let temp = dato2
         temp += '5'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 6) {
         let temp = dato2
         temp += '6'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 7) {
         let temp = dato2
         temp += '7'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 8) {
         let temp = dato2
         temp += '8'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 9) {
         let temp = dato2
         temp += '9'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === 0) {
         let temp = dato2
         temp += '0'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === '.') {
         let temp = dato2
         temp += '.'
+        const temppantalla = temp.toString().substring(0, 9)
+        letPantalla(temppantalla)
         letDato2(temp)
-        letPantalla(temp)
       } else if (dato === '+') {
         letOperador('+')
         letPantalla('+')
@@ -211,17 +263,15 @@ const Calculadora = () => {
         letPantalla('%')
       } else if (dato === '=') {
         mostrarResultado()
-        flashResultado()
         letDato1('')
         letDato2('')
-        console.log(resultado)
       } else if (dato === 'C') {
         letDato1('')
         letDato2('')
         letOperador('0')
         letResultado('0')
         letPantalla('_')
-        console.log('reseteado')
+        alert('reseteado')
       }
     }
   }

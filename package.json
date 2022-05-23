@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@emotion/react": "^11.9.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "mathjs": "^10.5.3",
@@ -32,7 +34,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
-    "lint": "eslint src/**"
+    "lint": "eslint src/**",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
